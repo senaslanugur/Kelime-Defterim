@@ -46,7 +46,7 @@
     icon: 'info',
     title: 'Oops...',
     text: 'Herhangi bir kelimeniz yok.',
-    footer: '<a href="Kelime_Defterim_AnaSayfa.html">Kelime Ekleyebilirsiniz...</a>'
+    footer: '<a href="../index.html">Kelime Ekleyebilirsiniz...</a>'
   })
   }
 
