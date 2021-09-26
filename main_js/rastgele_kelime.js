@@ -8,7 +8,7 @@
 	})
 
 	var hst = document.getElementById('highscores');
-	var get_url = 'http://ugurdbtest.scienceontheweb.net/jsonwords.json'
+	var get_url = '../jsonwords.json'
  $.getJSON(get_url, function(d) {
 	 for(var k=0; k<10; k++){
 	 var idx = Math.floor(9368 * Math.random());
