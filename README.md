@@ -1,0 +1,2 @@
+# Kelime-Defterim
+Kelime defterim
