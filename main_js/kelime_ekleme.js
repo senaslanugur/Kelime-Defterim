@@ -8,12 +8,9 @@
 
             localStorage.setItem(document.getElementById("ingilizce_kelime").value, JSON.stringify(data));
 
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Kelimeniz Eklenmiştir',
-                showConfirmButton: false,
-                timer: 1500
+            jSuites.notification({
+                name: 'Kelime Defteri',
+                message: 'Kelimeniz Eklenmiştir.',
             })
 
             document.getElementById("turkce_anlami").value = "";
@@ -93,4 +90,3 @@
             }
 
         }
-
