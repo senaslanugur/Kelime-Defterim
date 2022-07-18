@@ -18,6 +18,34 @@ xmlhttp.onreadystatechange = function () {
             '</div></div>'
       }
 
+    }else{
+
+      let timerInterval
+      Swal.fire({
+        title: 'Loading',
+        html: ' thay will be avaliable after <b style="color:blue"></b> milliseconds.',
+        timer: 2000,
+        timerProgressBar: true,
+        imageUrl: 'asserts/rocket.png',
+        imageAlt: 'Custom image',
+        imageWidth: 250,
+        imageHeight: 250,
+        didOpen: () => {
+          Swal.showLoading()
+          const b = Swal.getHtmlContainer().querySelector('b')
+          timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft()
+          }, 100)
+        },
+        willClose: () => {
+          clearInterval(timerInterval)
+        }
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log('I was closed by the timer')
+        }
+      })
     }
 };
 
